@@ -169,7 +169,7 @@
       window.addEventListener('resize', resize, { passive: true });
 
       new GLTFLoader().load(
-        '../assets/3d/ForgeLang-logo.glb',
+        './assets/3d/ForgeLang-logo.glb',
         (gltf) => {
           logo = gltf.scene;
           logo.traverse((node) => {
@@ -184,7 +184,7 @@
         },
         undefined,
         (error) => {
-          console.error('ForgeLang GLB failed to load from ../assets/3d/ForgeLang-logo.glb', error);
+          console.error('ForgeLang GLB failed to load from ./assets/3d/ForgeLang-logo.glb', error);
           setStatus('Unable to load the 3D logo.', true);
         }
       );
